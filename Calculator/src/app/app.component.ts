@@ -6,39 +6,51 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mynewcalculator';
-  toshow ='0'
-  currvalue=''
-  writetoinput(value:string){
-    // if(this.currvalue=='0'){
-    //   this.currvalue=value
-    // }
-    // if(this.currvalue!='0')
-    // {
-      this.currvalue =this.currvalue+value
-      this.toshow=this.currvalue
+   result!:number;
+   add(val1:string, val2:string)
+   {
+     this.result= parseFloat(val1)+parseFloat(val2)
+   }
+   sub(val1:string, val2:string)
+   {
+     this.result= parseFloat(val1)-parseFloat(val2)
+   }
+   mul(val1:string, val2:string): void
+   {
+     this.result= parseFloat(val1)*parseFloat(val2)
+   }
+   div(val1:string, val2:string): void
+   {
+     this.result= parseFloat(val1)/parseFloat(val2)
   }
-  equals()
+  /*addresult!:number;
+  subresult!:number;
+  mulresult!:number;
+  divresult!:number;
+  add(val1:string, val2:string)
   {
-    this.toshow=eval(this.currvalue)
-    this.currvalue = this.toshow
+    this.addresult= parseFloat(val1)+parseFloat(val2)
   }
-  clear(){
-    this.currvalue='';
-    this.toshow='0'
-  }
-  back()
+  sub(val1:string, val2:string)
   {
-    this.currvalue=this.currvalue.slice(0,-1)
-    this.toshow=this.currvalue
-   if(this.toshow==''){this.toshow='0'}
-    // this.toshow=this.currvalue
+    this.subresult= parseFloat(val1)-parseFloat(val2)
   }
-  calcvalue(solve:any){
-  if(solve.chartAt(0)=='0')
+  mul(val1:string, val2:string): void
   {
-    solve=solve.slice(1,)
+    this.mulresult= parseFloat(val1)*parseFloat(val2)
   }
-    this.toshow=eval(solve)
-  }
+  div(val1:string, val2:string): void
+  {
+    this.divresult= parseFloat(val1)/parseFloat(val2)
+  }-->*/
+
+  title = 'calculator';
 }
+function sub(val1: any, string: any, val2: any, string1: any) {
+  throw new Error('Function not implemented.');
+}
+
+function div(val1: any, string: any, val2: any, string1: any) {
+  throw new Error('Function not implemented.');
+}
+
